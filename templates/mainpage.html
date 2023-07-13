@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:darkgray;
+      }
+      
+      form {
+        width: 800px;
+        margin: 0 auto;
+      }
+      
+      label {
+        display: block;
+        margin-top: 10px;
+        font-size: 18px;
+        text-decoration: underline;
+      }
+      
+      input[type="text"],
+      input[type="number"],
+      input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      
+      button:hover {
+        background-color: blue;
+      }
+      
+      header {
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 20px;
+        text-decoration: underline;
+      }
+      
+      input[type="text"]:focus,
+      input[type="number"]:focus,
+      input[type="date"]:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+
+      a {
+    margin-top: -1600px;
+    margin-right: 69px;
+    color: blue; 
+    text-decoration:none; 
+    font-size: 17px;
+  }
+
+  a:hover {
+    text-decoration:underline; 
+  }
+  
+    </style>
+    <title>Details of listed Entity</title>
+  </head>
+  <body>
+    <a href="PS.html">Products/Services</a>
+      <header>Details of Listed Entity</header><br>
+      <br>
+      <form>
+          <label>(i) Corporate Identity Number (CIN) of the Listed Entity</label>
+          <input type="text" placeholder="Enter CIN" required /><br>
+          <br>
+        
+          <label>(ii) E-mail</label>
+          <input type="text" placeholder="Enter email address" required /><br>
+          <br>
+        
+            <label>(iii) Telephone</label>
+            <input type="number" placeholder="Enter phone number" required /><br>
+            <br>
+          
+            <label>(iv) Year of Incorporation</label>
+            <input type="date" placeholder="Enter the Year" required /><br>
+            <br>
+          
+          <label>(v) Corporate Address</label>
+          <input type="text" placeholder="Enter street address" required />
+          <input type="text" placeholder="Enter street address line 2" required />
+          
+            <input type="text" placeholder="Enter your country" required />
+            <input type="text" placeholder="Enter your city" required />
+          
+            <input type="text" placeholder="Enter your region" required />
+            <input type="number" placeholder="Enter postal code" required /><br>
+            <br>
+
+            <label>(vi) Website</label>
+            <input type="text" placeholder="Enter the website" required /><br>
+            <br>
+          
+          
+            <label>(vii) Financial year for which reporting is being done</label>
+            <input type="text" placeholder="Enter the financial-year" required /><br>
+            <br>
+          
+            <label>(viii) Name of the Stock Exchange(s) where shares are listed</label>
+            <input type="text" placeholder="Enter the name of stock" required /><br>
+            <br>
+          
+            <label>(ix) Paid-up Capital</label>
+            <input type="text" placeholder="Enter the capital" required /><br>
+            <br>
+          
+            <label>(x) Name and contact details (telephone, email address) of the person who may be
+                contacted in case of any queries on the BRSR report</label>
+            <input type="number" placeholder="Enter the telephone" required />
+            <input type="text" placeholder="Enter the email address" required /><br>
+            <br>
+          
+            <label>(xi) Reporting boundary - Are the disclosures under this report made on a standalone basis
+                (i.e. only for the entity) or on a consolidated basis (i.e. for the entity and all the entities which form a part of its consolidated financial statements, taken together). </label>
+            <input type="text" placeholder="Enter the reporting boundary" required /><br>
+            <br>
+            <br>
+            
+        <button>Submit</button>
+      </form>
+
+  </body>
+</html>
