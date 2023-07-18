@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <style>
@@ -73,18 +73,15 @@
   }
   
     </style>
-    <title>Details of listed Entity</title>
+    <title>Form Submitted</title>
   </head>
   <body>
-  Hello Welcome to BRSR form
-  <form action = "/inputdb" method = "post">
-    <label> Name </label> <br>
-    <input type = "text" name = "name_input"/><br>
-    <label> Email </label> <br>
-    <input type = "text" name = "Email_input"/><br>
-    <label> Telephone </label> <br>
-    <input type = "text" name = "Tele_input"/><br>
-    <button>Submit</button><br>
-  </form>
-</body>
+    <h2><center>Your Application has been submitted</h2>
+    <h4>Name</h4>
+    <div>{{application['name_input']}}</div>
+    <h4>Email</h4>
+    <div>{{application['Email_input']}}</div>
+    <h4>Telephone</h4>
+    <div>{{application['Tele_input']}}</div>
+  </body>
 </html>
