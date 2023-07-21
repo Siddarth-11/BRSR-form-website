@@ -3,6 +3,7 @@
 <head>
   <title>Operations</title>
   <style>
+
     table {
       border-collapse: collapse;
       width: 100%;
@@ -10,7 +11,7 @@
 
     th, td {
       text-align: left;
-      padding: 8px;
+      padding: 10px;
       border-bottom: 1px solid #ddd;
     }
 
@@ -19,30 +20,17 @@
     }
   body {
     font-family: Arial, sans-serif;
-    background-color: darkgray;
+    background-color: cadetblue;
   }
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
 
   header {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
     text-decoration: underline;
+    color: whitesmoke;
   }
 
   input[type="text"] {
@@ -61,8 +49,8 @@
   a {
     margin-top: -1600px;
     margin-right: 69px;
-    color: blue; 
-    text-decoration:none;
+    color: blue  ; 
+    text-decoration:none; 
     font-size: 17px;
   }
 
@@ -73,6 +61,9 @@
   label {
     font-size: 18px;
     text-decoration: underline;
+    text-decoration-color: black;
+    color: whitesmoke;
+    font-style: italic;
   }
 
 </style>
@@ -83,6 +74,7 @@
     <br>
         <header>Operations</header><br>
         <br>
+  <form action = "/operationsdb" method = "post" >
   <table>
     <thead>
       <tr>
@@ -98,15 +90,15 @@
       <tr>
         
         <td>National</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "national_1" /></td>
+        <td><input type="text" placeholder="" required name = "national_2" /></td>
+        <td><input type="text" placeholder="" required name = "national_3" /></td>
       </tr>
       <tr>
         <td>International</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "international_1" /></td>
+        <td><input type="text" placeholder="" required name = "international_2" /></td>
+        <td><input type="text" placeholder="" required name = "international_3" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -128,11 +120,11 @@
         <br>
       <tr>
         <td>National (No. of States)</td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "national_locations" /></td>
       </tr>
       <tr>
         <td>International (No. of Countries)</td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "international_locations" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -141,11 +133,11 @@
   <br>
   <label>b. What is the contribution of exports as a percentage of the total turnover of the entity?</label><br>
         <br>
-        <input type="text" placeholder="" required /><br>
+        <input type="text" placeholder="" required name = "exports_contribution" /><br>
         <br> 
   <label>c. A brief on types of customers</label><br>
         <br>   
-        <input type="text" placeholder="" required /><br>
+        <input type="text" placeholder="" required name = "customer_types" /><br>
         <br>
         <br>
         
