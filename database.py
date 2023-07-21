@@ -65,9 +65,45 @@ def products_services(info):
     })
 
 
+def plants_located_data(info):
+  with engine.connect() as conn:
+    query = text("insert into plants_located (national_no_of_plants,national_no_of_offices,national_total_locations,international_no_of_plants,international_no_of_offices,international_total_locations) values (:national_no_of_plants,:national_no_of_offices,:national_total_locations,:international_no_of_plants,:international_no_of_offices,:international_total_locations)")
 
+    conn.execute(query , {
+     "national_no_of_plants" : info['national_1'] ,
+    "national_no_of_offices" : info['national_2'] ,
+    "national_total_locations" : info['national_3'] ,
+    "international_no_of_plants" : info['international_1'] ,
+    "international_no_of_offices" : info['international_2'] ,
+    "international_total_locations" : info['international_3']
+    })
 
-                 
+def market_served_data(info):
+  with engine.connect() as conn:
+    query = text("insert into market_served (national_locations,international_locations,exports_contribution,customer_types) values (:national_locations,:international_locations,:exports_contribution,:customer_types)")
+
+    conn.execute(query , {
+     "national_locations" : info['national_locations'] ,
+    "international_locations" : info['international_locations'] ,
+    "exports_contribution" : info['exports_contribution'] ,
+    "customer_types" : info['customer_types']
+    })
+
+def company_details_data(info):
+  with engine.connect() as conn:
+    query = text("insert into CompanyDetails (Name,Relationship ,SharePercentage,ParticipatesInBusinessResponsibility ,CSRApplicable,TurnoverInRs,NetWorthInRs) values (:Name,:Relationship ,:SharePercentage,:ParticipatesInBusinessResponsibility ,:CSRApplicable,:TurnoverInRs,:NetWorthInRs)")
+
+    conn.execute(query , {
+     "Name" : info['Name'] ,
+    "Relationship" : info['Relationship'] ,
+    "SharePercentage" : info['SharePercentage'] ,
+    "ParticipatesInBusinessResponsibility" : info['ParticipatesInBusinessResponsibility'],
+      "CSRApplicable" : info['CSRApplicable'] ,
+      "TurnoverInRs" : info['TurnoverInRs'] ,
+      "NetWorthInRs" : info['NetWorthInRs'] 
+    })   
+
+'''
 def load_data_from_db(id):
   with engine.connect() as conn:
     result = conn.execute(
@@ -77,7 +113,7 @@ def load_data_from_db(id):
       return None
     else:
       return list(rows[0])
-
+'''
 
 def store_trial_data(data):
   with engine.connect() as conn:
