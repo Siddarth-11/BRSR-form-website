@@ -77,63 +77,63 @@
   </head>
   <body>
     <a href="PS.html">Products/Services</a>
-    <a href="trial.html">TRIAL</a>
+    <a href="trial.html">Login</a>
       <header>Details of Listed Entity</header><br>
       <br>
-      <form method = "post">
+      <form action = "/inputdb" method = "post" >
           <label>(i) Corporate Identity Number (CIN) of the Listed Entity</label>
-          <input type="text" placeholder="Enter CIN" /><br>
+          <input type="text" placeholder="Enter CIN" name="cin" /><br>
           <br>
         
           <label>(ii) E-mail</label>
-          <input type="text" placeholder="Enter email address" /><br>
+          <input type="text" placeholder="Enter email address" name="email" /><br>
           <br>
         
             <label>(iii) Telephone</label>
-            <input type="number" placeholder="Enter phone number" /><br>
+            <input type="number" placeholder="Enter phone number" name="telephone" /><br>
             <br>
           
             <label>(iv) Year of Incorporation</label>
-            <input type="date" placeholder="Enter the Year" /><br>
+            <input type="date" placeholder="Enter the Year" name="year_of_incorporation" /><br>
             <br>
           
           <label>(v) Corporate Address</label>
-          <input type="text" placeholder="Enter street address" />
-          <input type="text" placeholder="Enter street address line 2" />
+          <input type="text" placeholder="Enter street address" name="corporate_address" />
+          <input type="text" placeholder="Enter street address line 2" name="corporate_address" />
           
-            <input type="text" placeholder="Enter your country" />
-            <input type="text" placeholder="Enter your city" />
+            <input type="text" placeholder="Enter your country" name="corporate_address" />
+            <input type="text" placeholder="Enter your city" name="corporate_address" />
           
-            <input type="text" placeholder="Enter your region" />
-            <input type="number" placeholder="Enter postal code" /><br>
+            <input type="text" placeholder="Enter your region" name="corporate_address" />
+            <input type="number" placeholder="Enter postal code" name="corporate_address" /><br>
             <br>
 
             <label>(vi) Website</label>
-            <input type="text" placeholder="Enter the website" /><br>
+            <input type="text" placeholder="Enter the website" name="website" /><br>
             <br>
           
           
             <label>(vii) Financial year for which reporting is being done</label>
-            <input type="text" placeholder="Enter the financial-year" /><br>
+            <input type="text" placeholder="Enter the financial-year" name="financial_year" /><br>
             <br>
           
             <label>(viii) Name of the Stock Exchange(s) where shares are listed</label>
-            <input type="text" placeholder="Enter the name of stock" /><br>
+            <input type="text" placeholder="Enter the name of stock exhange" name="stock_exchange" /><br>
             <br>
           
             <label>(ix) Paid-up Capital</label>
-            <input type="text" placeholder="Enter the capital" /><br>
+            <input type="text" placeholder="Enter the capital" name="paid_up_capital" /><br>
             <br>
           
             <label>(x) Name and contact details (telephone, email address) of the person who may be
                 contacted in case of any queries on the BRSR report</label>
-            <input type="number" placeholder="Enter the telephone" />
-            <input type="text" placeholder="Enter the email address" /><br>
+            <input type="number" placeholder="Enter the telephone" name="contact_person_telephone" />
+            <input type="text" placeholder="Enter the email address" name="contact_person_email" /><br>
             <br>
           
             <label>(xi) Reporting boundary - Are the disclosures under this report made on a standalone basis
                 (i.e. only for the entity) or on a consolidated basis (i.e. for the entity and all the entities which form a part of its consolidated financial statements, taken together). </label>
-            <input type="text" placeholder="Enter the reporting boundary" /><br>
+            <input type="text" placeholder="Enter the reporting boundary" name="reporting_boundary" /><br>
             <br>
             <br>
             

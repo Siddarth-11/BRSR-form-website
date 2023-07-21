@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify, request
-from database import engine, load_data_from_db, store_trial_data
+from database import engine, load_data_from_db, store_trial_data, listed_entity_data,bussiness_activites,products_services
 
 app = Flask(__name__)
 '''
@@ -64,12 +64,24 @@ def trial():
 # return jsonify(list(data))
 
 
-@app.route("/inputdb", methods=['post'])
-def input():
-  name = request.form.to_dict()
-  store_trial_data(name)
-  return render_template('Form_submitted.html', application=name)
+# @app.route("/inputdb", methods=['post'])
+# def input():
+#   name = request.form.to_dict()
+#   store_trial_data(name)
+#   return render_template('Form_submitted.html', application=name)
 
+@app.route("/inputdb", methods=['post'])
+def input1():
+  name = request.form.to_dict()
+  listed_entity_data(name)
+  return render_template('mainpage.html', application=name )
+
+@app.route("/productdb", methods=['POST'])
+def input2():
+  name = request.form.to_dict()
+  bussiness_activites(name)
+  products_services(name)
+  return render_template('products.html', application=name )
 
 '''
 @app.route("/input", methods=["POST" , "GET"])
