@@ -3,6 +3,7 @@
 <head>
   <title>Joint ventures</title>
   <style>
+
     table {
       border-collapse: collapse;
       width: 100%;
@@ -10,7 +11,7 @@
 
     th, td {
       text-align: left;
-      padding: 8px;
+      padding: 12px;
       border-bottom: 1px solid #ddd;
     }
 
@@ -19,30 +20,16 @@
     }
   body {
     font-family: Arial, sans-serif;
-    background-color: darkgray;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
+    background-color: cadetblue;
   }
 
   header {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
     text-decoration: underline;
+    color: whitesmoke;
   }
 
   input[type="text"] {
@@ -73,8 +60,11 @@
   label {
     font-size: 18px;
     text-decoration: underline;
+    text-decoration-color: black;
+    color: whitesmoke;
+    font-style: italic;;
   }
-
+    
 </style>
 </head>
 <body>
@@ -83,6 +73,7 @@
     <br>
         <header>Holding, Subsidiary and Associate Companies (including joint ventures)</header><br>
         <br>
+  <form action = "/HSAdb" method = "post" >
   <table>
     <thead>
       <tr>
@@ -99,10 +90,10 @@
       <tr>
         
         <td>1</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><select>
+        <td><input type="text" placeholder="" required name = "Name" /></td>
+        <td><input type="text" placeholder="" required name = "Relationship" /></td>
+        <td><input type="text" placeholder="" required name = "SharePercentage" /></td>
+        <td><select name="ParticipatesInBusinessResponsibility" required>
                 <option hidden></option>
                 <option>Yes</option>
                 <option>No</option>
@@ -117,18 +108,18 @@
   <header>CSR Details</header>
 
   <label>(i) Whether CSR is applicable as per section 135 of Companies Act, 2013: (Yes/No)</label>
-    <select>
+    <select name="CSRApplicable" required>
     <option hidden></option>
     <option>Yes</option>
     <option>No</option>
 </select><br>
 <br>
    <label>(ii) Turnover (in Rs.)</label>
-    <input type="Text" placeholder="" required /><br>
+    <input type="Text" placeholder="" required name = "TurnoverInRs" /><br>
     <br>
 
    <label>(iii) Net worth (in Rs.)</label> 
-    <input type="Text" placeholder="" required /><br>
+    <input type="Text" placeholder="" required name = "NetWorthInRs" /><br>
     <br>
     <br>
 
