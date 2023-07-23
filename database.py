@@ -114,16 +114,107 @@ def load_data_from_db(id):
     else:
       return list(rows[0])
 '''
-
-def store_trial_data(data):
+def Comm_ComplaintsGrievances(info):
   with engine.connect() as conn:
-    query = text(
-      "INSERT INTO brsr_form.trial (Email_input, Tele_input, name_input) VALUES (:email, :tele, :name)"
-    )
+    query = text("insert into Comm_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
 
-    conn.execute(
-      query, {
-        "email": data['Email_input'],
-        "tele": data['Tele_input'],
-        "name": data['name_input']
-      })
+    conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['GrievanceRedressalMechanism'] ,
+      "GrievanceRedressPolicyLink" : info['GrievanceRedressPolicyLink'] ,
+    "NumComplaintsFiledCurrentYear" : info['NumComplaintsFiledCurrentYear'] ,
+    "NumComplaintsPendingCurrentYear" : info['NumComplaintsPendingCurrentYear'] ,
+    "RemarksCurrentYear" : info['RemarksCurrentYear'],
+      "NumComplaintsFiledPreviousYear" : info['NumComplaintsFiledPreviousYear'] ,
+      "NumComplaintsPendingPreviousYear" : info['NumComplaintsPendingPreviousYear'] ,
+      "RemarksPreviousYear" : info['RemarksPreviousYear'] 
+    })   
+
+def Investers_ComplaintsGrievances(info):
+  with engine.connect() as conn:
+    query = text("insert into Investers_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
+
+    conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['n0'] ,
+      "GrievanceRedressPolicyLink" : info['n1'] ,
+    "NumComplaintsFiledCurrentYear" : info['n2'] ,
+    "NumComplaintsPendingCurrentYear" : info['n3'] ,
+    "RemarksCurrentYear" : info['n4'],
+      "NumComplaintsFiledPreviousYear" : info['n5'] ,
+      "NumComplaintsPendingPreviousYear" : info['n6'] ,
+      "RemarksPreviousYear" : info['n7'] 
+    }) 
+
+def Shareholders_ComplaintsGrievances(info):
+  with engine.connect() as conn:
+    query = text("insert into Shareholders_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
+
+    conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['n8'] ,
+      "GrievanceRedressPolicyLink" : info['n9'] ,
+    "NumComplaintsFiledCurrentYear" : info['n10'] ,
+    "NumComplaintsPendingCurrentYear" : info['n11'] ,
+    "RemarksCurrentYear" : info['n12'],
+      "NumComplaintsFiledPreviousYear" : info['n13'] ,
+      "NumComplaintsPendingPreviousYear" : info['n14'] ,
+      "RemarksPreviousYear" : info['n15'] 
+    }) 
+
+def Emp_ComplaintsGrievances(info):
+  with engine.connect() as conn:
+    query = text("insert into Emp_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
+
+    conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['n16'] ,
+      "GrievanceRedressPolicyLink" : info['n17'] ,
+    "NumComplaintsFiledCurrentYear" : info['n18'] ,
+    "NumComplaintsPendingCurrentYear" : info['n19'] ,
+    "RemarksCurrentYear" : info['n20'],
+      "NumComplaintsFiledPreviousYear" : info['n21'] ,
+      "NumComplaintsPendingPreviousYear" : info['n22'] ,
+      "RemarksPreviousYear" : info['n23'] 
+    }) 
+
+def Customer_ComplaintsGrievances(info):
+  with engine.connect() as conn:
+    query = text("insert into Customer_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
+
+    conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['n24'] ,
+      "GrievanceRedressPolicyLink" : info['n25'] ,
+    "NumComplaintsFiledCurrentYear" : info['n26'] ,
+    "NumComplaintsPendingCurrentYear" : info['n27'] ,
+    "RemarksCurrentYear" : info['n28'],
+      "NumComplaintsFiledPreviousYear" : info['n29'] ,
+      "NumComplaintsPendingPreviousYear" : info['n30'] ,
+      "RemarksPreviousYear" : info['n31'] 
+    }) 
+
+def partners_ComplaintsGrievances(info):
+  with engine.connect() as conn:
+    query = text("insert into partners_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
+
+    conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['n31'] ,
+      "GrievanceRedressPolicyLink" : info['n32'] ,
+    "NumComplaintsFiledCurrentYear" : info['n33'] ,
+    "NumComplaintsPendingCurrentYear" : info['n34'] ,
+    "RemarksCurrentYear" : info['n35'],
+      "NumComplaintsFiledPreviousYear" : info['n36'] ,
+      "NumComplaintsPendingPreviousYear" : info['n37'] ,
+      "RemarksPreviousYear" : info['n38'] 
+    }) 
+
+def others_ComplaintsGrievances(info):
+  with engine.connect() as conn:
+    query = text("insert into others_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
+
+    conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['n39'] ,
+      "GrievanceRedressPolicyLink" : info['n40'] ,
+    "NumComplaintsFiledCurrentYear" : info['n41'] ,
+    "NumComplaintsPendingCurrentYear" : info['n42'] ,
+    "RemarksCurrentYear" : info['n43'],
+      "NumComplaintsFiledPreviousYear" : info['n44'] ,
+      "NumComplaintsPendingPreviousYear" : info['n45'] ,
+      "RemarksPreviousYear" : info['n46'] 
+    }) 
