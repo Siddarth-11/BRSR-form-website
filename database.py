@@ -194,27 +194,176 @@ def partners_ComplaintsGrievances(info):
     query = text("insert into partners_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
 
     conn.execute(query , {
-     "GrievanceRedressalMechanism" : info['n31'] ,
-      "GrievanceRedressPolicyLink" : info['n32'] ,
-    "NumComplaintsFiledCurrentYear" : info['n33'] ,
-    "NumComplaintsPendingCurrentYear" : info['n34'] ,
-    "RemarksCurrentYear" : info['n35'],
-      "NumComplaintsFiledPreviousYear" : info['n36'] ,
-      "NumComplaintsPendingPreviousYear" : info['n37'] ,
-      "RemarksPreviousYear" : info['n38'] 
+     "GrievanceRedressalMechanism" : info['n32'] ,
+      "GrievanceRedressPolicyLink" : info['n33'] ,
+    "NumComplaintsFiledCurrentYear" : info['n34'] ,
+    "NumComplaintsPendingCurrentYear" : info['n35'] ,
+    "RemarksCurrentYear" : info['n36'],
+      "NumComplaintsFiledPreviousYear" : info['n37'] ,
+      "NumComplaintsPendingPreviousYear" : info['n38'] ,
+      "RemarksPreviousYear" : info['n39'] 
     }) 
 
 def others_ComplaintsGrievances(info):
   with engine.connect() as conn:
     query = text("insert into others_ComplaintsGrievances (GrievanceRedressalMechanism,GrievanceRedressPolicyLink,NumComplaintsFiledCurrentYear,NumComplaintsPendingCurrentYear,RemarksCurrentYear,NumComplaintsFiledPreviousYear,NumComplaintsPendingPreviousYear,RemarksPreviousYear) values (:GrievanceRedressalMechanism,:GrievanceRedressPolicyLink,:NumComplaintsFiledCurrentYear,:NumComplaintsPendingCurrentYear,:RemarksCurrentYear,:NumComplaintsFiledPreviousYear,:NumComplaintsPendingPreviousYear,:RemarksPreviousYear)")
 
-    conn.execute(query , {
-     "GrievanceRedressalMechanism" : info['n39'] ,
-      "GrievanceRedressPolicyLink" : info['n40'] ,
-    "NumComplaintsFiledCurrentYear" : info['n41'] ,
-    "NumComplaintsPendingCurrentYear" : info['n42'] ,
-    "RemarksCurrentYear" : info['n43'],
-      "NumComplaintsFiledPreviousYear" : info['n44'] ,
-      "NumComplaintsPendingPreviousYear" : info['n45'] ,
-      "RemarksPreviousYear" : info['n46'] 
+  conn.execute(query , {
+     "GrievanceRedressalMechanism" : info['n30'] ,
+      "GrievanceRedressPolicyLink" : info['n41'] ,
+    "NumComplaintsFiledCurrentYear" : info['n42'] ,
+    "NumComplaintsPendingCurrentYear" : info['n43'] ,
+    "RemarksCurrentYear" : info['n44'],
+      "NumComplaintsFiledPreviousYear" : info['n45'] ,
+      "NumComplaintsPendingPreviousYear" : info['n46'] ,
+      "RemarksPreviousYear" : info['n47'] 
     }) 
+    
+def landing_page_data(info):
+  with engine.connect() as conn:
+    query = text("insert into landing_page (report_id , begin_period , end_period) values (:report_id , :begin_period , :end_period)")
+
+    conn.execute(query , {
+     "report_id" : info['report_id'],
+     "begin_period" : info['begin_period'],
+     "end_period" : info['end_period']
+   })
+
+def entity_overview_data(info):
+  with engine.connect() as conn:
+    query = text("insert into entity_overview (MaterialIssue1 , RiskOpportunity1 , Rationale1 , Approach1 , FinancialImplications1, MaterialIssue2 , RiskOpportunity2 , Rationale2 , Approach2 , FinancialImplications2) values (:s1 , :s2 , :s3 , :s4 , :s5, :s6 , :s7 , :s8 ,:s9 , :s10)")
+
+    conn.execute(query , {
+     "s1": info['MaterialIssue1'],
+     "s2": info['RiskOpportunity1'],
+     "s3": info['Rationale1'],
+     "s4": info['Approach1'],
+     "s5": info['FinancialImplications1'],
+     "s6": info['MaterialIssue2'],
+     "s7": info['RiskOpportunity2'],
+     "s8": info['Rationale2'],
+     "s9": info['Approach2'],
+     "s10": info['FinancialImplications2']
+  })
+
+def insert_employee_data(info):
+    with engine.connect() as conn:
+        
+        employees_query = text("INSERT INTO Employees (Permanent,permanent_male1, permanent_female1, permanent_male2,permanent_female2, other_than_permanent, other_than_permanent_male1, other_than_permanent_female1, other_than_permanent_male2,other_than_permanent_female2,total_employees, total_male1,total_female1,total_male2 , total_female2) VALUES (:permanent, :permanent_male1, :permanent_female1, :permanent_male2, :permanent_female2,other_than_permanent,:other_than_permanent_male1,:other_than_permanent_female1,:other_than_permanent_male2,:other_than_permanent_female2, :total_employees, :total_male1, :total_female1, :total_male2 , :total_female2)")
+
+        conn.execute(employees_query, {
+            "permanent": info['a1'],
+            "permanent_male1": info["a2"],
+            "permanent_female1": info["a3"],
+            "permanent_male2": info["a4"],
+            "permanent_female2": info["a5"],
+            "other_than_permanent": info["a6"],
+            "other_than_permanent_male1": info["a7"],
+            "other_than_permanent_female1": info["a8"],
+            "other_than_permanent_male2": info["a9"],
+            "other_than_permanent_female2": info["a10"],
+            "total_employees": info["a11"],
+            "total_male1": info["a12"],
+            "total_female1": info["a13"],
+            "total_male2": info["a14"],
+            "total_female2": info["a15"]
+             })
+
+        workers_query = text("INSERT INTO Workers (Permanent,permanent_male1, permanent_female1, permanent_male2,permanent_female2, other_than_permanent, other_than_permanent_male1, other_than_permanent_female1, other_than_permanent_male2,other_than_permanent_female2,total_employees, total_male1,total_female1,total_male2 , total_female2) VALUES (:permanent, :permanent_male1, :permanent_female1, :permanent_male2, :permanent_female2,other_than_permanent,:other_than_permanent_male1,:other_than_permanent_female1,:other_than_permanent_male2,:other_than_permanent_female2, :total_employees, :total_male1, :total_female1, :total_male2 , :total_female2)")
+
+        conn.execute(workers_query, {
+            "permanent": info['a16'],
+            "permanent_male1": info["a17"],
+            "permanent_female1": info["a18"],
+            "permanent_male2": info["a19"],
+            "permanent_female2": info["a20"],
+            "other_than_permanent": info["a21"],
+            "other_than_permanent_male1": info["a22"],
+            "other_than_permanent_female1": info["a23"],
+            "other_than_permanent_male2": info["a24"],
+            "other_than_permanent_female2": info["a25"],
+            "total_employees": info["a26"],
+            "total_male1": info["a27"],
+            "total_female1": info["a28"],
+            "total_male2": info["a29"],
+            "total_female2": info["a30"]
+        })
+
+        differently_abled_employees_query = text("INSERT INTO DifferentlyAbledEmployees (Permanent,permanent_male1, permanent_female1, permanent_male2,permanent_female2, other_than_permanent, other_than_permanent_male1, other_than_permanent_female1, other_than_permanent_male2,other_than_permanent_female2,total_employees, total_male1,total_female1,total_male2 , total_female2) VALUES (:permanent, :permanent_male1, :permanent_female1, :permanent_male2, :permanent_female2,other_than_permanent,:other_than_permanent_male1,:other_than_permanent_female1,:other_than_permanent_male2,:other_than_permanent_female2, :total_employees, :total_male1, :total_female1, :total_male2 , :total_female2)")
+
+        conn.execute(differently_abled_employees_query, {
+            "permanent": info['a31'],
+            "permanent_male1": info["a32"],
+            "permanent_female1": info["a33"],
+            "permanent_male2": info["a34"],
+            "permanent_female2": info["a35"],
+            "other_than_permanent": info["a36"],
+            "other_than_permanent_male1": info["a37"],
+            "other_than_permanent_female1": info["a38"],
+            "other_than_permanent_male2": info["a39"],
+            "other_than_permanent_female2": info["a40"],
+            "total_employees": info["a41"],
+            "total_male1": info["a42"],
+            "total_female1": info["a43"],
+            "total_male2": info["a44"],
+            "total_female2": info["a45"]
+        })
+      
+        differently_abled_workers_query = text("INSERT INTO DifferentlyAbledWorkers (Permanent,permanent_male1, permanent_female1, permanent_male2,permanent_female2, other_than_permanent, other_than_permanent_male1, other_than_permanent_female1, other_than_permanent_male2,other_than_permanent_female2,total_employees, total_male1,total_female1,total_male2 , total_female2) VALUES (:permanent, :permanent_male1, :permanent_female1, :permanent_male2, :permanent_female2,other_than_permanent,:other_than_permanent_male1,:other_than_permanent_female1,:other_than_permanent_male2,:other_than_permanent_female2, :total_employees, :total_male1, :total_female1, :total_male2 , :total_female2)")
+
+        conn.execute(differently_abled_workers_query, {
+            "permanent": info['a46'],
+            "permanent_male1": info["a47"],
+            "permanent_female1": info["a48"],
+            "permanent_male2": info["a49"],
+            "permanent_female2": info["a50"],
+            "other_than_permanent": info["a51"],
+            "other_than_permanent_male1": info["a52"],
+            "other_than_permanent_female1": info["a53"],
+            "other_than_permanent_male2": info["a54"],
+            "other_than_permanent_female2": info["a55"],
+            "total_employees": info["a56"],
+            "total_male1": info["a57"],
+            "total_female1": info["a58"],
+            "total_male2": info["a59"],
+            "total_female2": info["a60"]
+        })
+
+        women_participation_query = text("INSERT INTO WomenParticipation (Board_of_Directors_Total, Board_of_Directors_Female1,  Board_of_Directors_Female2,Key_Management_Personnel_Total, Key_Management_Personnel_Female1, Key_Management_Personnel_Female2) VALUES (:board_of_directors_total, :board_of_directors_female1, :board_of_directors_female2,:key_management_personnel_total, :key_management_personnel_female1 , :key_management_personnel_female2)")
+
+        conn.execute(women_participation_query, {
+            "board_of_directors_total": info["a61"],
+            "board_of_directors_female1": info["a62"],
+            "board_of_directors_female2": info["a63"],
+            "key_management_personnel_total": info["a64"],
+            "key_management_personnel_female1": info["a65"],
+            "key_management_personnel_female2": info["a66"]
+        })
+
+        pe_turnover_rate_query = text("INSERT INTO PE_TurnoverRatePermanent (PE_fy_current_1, PE_fy_current_2, PE_fy_current_3, PE_fy_previous_1, PE_fy_previous_2, PE_fy_previous_3, PE_fy_year_prior_1, PE_fy_year_prior_2, PE_fy_year_prior_3) VALUES (:PE_fy_current_1, :PE_fy_current_2, :PE_fy_current_3, :PE_fy_previous_1, :PE_fy_previous_2, :PE_fy_previous_3, :PE_fy_year_prior_1, :PE_fy_year_prior_2, :PE_fy_year_prior_3)")
+
+        conn.execute(pe_turnover_rate_query, {
+            "PE_fy_current_1": info["a67"],
+            "PE_fy_current_2": info["a68"],
+            "PE_fy_current_3": info["a69"],
+            "PE_fy_previous_1": info["a70"],
+            "PE_fy_previous_2": info["a71"],
+            "PE_fy_previous_3": info["a72"],
+            "PE_fy_year_prior_1": info["a73"],
+            "PE_fy_year_prior_2": info["a74"],
+            "PE_fy_year_prior_3": info["a75"]
+        })
+
+        pw_turnover_rate_query = text("INSERT INTO PW_TurnoverRatePermanent (PW_fy_current_1, PW_fy_current_2, PW_fy_current_3, PW_fy_previous_1, PW_fy_previous_2, PW_fy_previous_3, PW_fy_year_prior_1, PW_fy_year_prior_2, PW_fy_year_prior_3) VALUES (:PW_fy_current_1, :PW_fy_current_2, :PW_fy_current_3, :PW_fy_previous_1, :PW_fy_previous_2, :PW_fy_previous_3, :PW_fy_year_prior_1, :PW_fy_year_prior_2, :PW_fy_year_prior_3)")
+
+        conn.execute(pw_turnover_rate_query, {
+            "PW_fy_current_1": info["a76"],
+            "PW_fy_current_2": info["a77"],
+            "PW_fy_current_3": info["a78"],
+            "PW_fy_previous_1": info["a79"],
+            "PW_fy_previous_2": info["a80"],
+            "PW_fy_previous_3": info["a81"],
+            "PW_fy_year_prior_1": info["a82"],
+            "PW_fy_year_prior_2": info["a83"],
+            "PW_fy_year_prior_3": info["a84"]
+        }) 
