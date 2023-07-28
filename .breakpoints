@@ -3,16 +3,16 @@
     "app.py": [
       {
         "id": "199c2fe8-6021-406c-8fe8-81525103648e",
-        "line": 126,
-        "version": 2221,
-        "index": 3822
+        "line": 1,
+        "version": 2270,
+        "index": 0
       }
     ],
     "templates/operations.html": [
       {
         "id": "4f1e6ad5-2c2a-4bbf-afea-24f6c037ec13",
         "line": 1,
-        "version": 155,
+        "version": 157,
         "index": 0
       }
     ]
