@@ -3,90 +3,114 @@
 <head>
   <title>Employees</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+    
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
-    th, td {
-      text-align: left;
-      padding: 8px;
-      border-bottom: 1px solid #ddd;
-    }
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
-  body {
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  color:black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: darkgray;
-  }
+    background-image: url('/templates/bgi.jpg');
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+label {
+    font-size: 20px;
     text-decoration: underline;
-  }
+    text-decoration-color: black;
+    color:black;
+    font-style: italic;
+}
 
-  input[type="text"] {
+input[type="text"] {
     width: 100%;
     padding: 6px 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
-  }
-
-  label {
-    font-size: 18px;
-    text-decoration:underline;
-  }
-
-  button {
-    font-size: 24px;
-    font-weight: bold;  
-  }
-
-  a {
-    margin-top: -1600px;
-    margin-right: 69px;
-    color: blue; 
-    text-decoration:none; 
-    font-size: 17px;
-  }
-
-  a:hover {
-    text-decoration:underline; 
-  }
-
-  label {
-    font-size: 18px;
-  }
+}  
 
 </style>
 </head>
 <body>
-    <a href="Operations.html">Operations</a>
-    <a href="HSA.html">Joint ventures</a><br>
-    <br>
+    
+  <ul>
+    <li><a href="DOE.html">Details of Entity</a></li>
+    <li><a href="PS.html">Products/Services</a></li>
+    <li><a href="Operations.html">Operations</a></li>
+    <li><a class="active" href="Employees.html">Employees</a></li>
+    <li><a href="HSA.html">Joint Ventures</a></li>
+    <li><a href="TDC.html">Transparency and Disclosures</a></li>
+    <li style="float:right"><a href="Section_B.html">SECTION-B</a></li>
+  </ul><br>
+  <br>
         <header>Employees</header><br>
         <br>
+  <form action = "/Employeesdb" method = "post" >
   <table>
     <thead>
       <tr>
@@ -111,29 +135,28 @@
         <br>
         <label>a. Employees and workers (including differently abled):</label><br>
         <br>
-        <tr>
-        
+        <tr> 
         <td>1</td>
         <td>Permanent (D)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a1" /></td>
+        <td><input type="text" placeholder="" name = "a2" /><input type="text" placeholder="" name = "a3" /></td>
+        <td><input type="text" placeholder="" name = "a4" /><input type="text" placeholder="" name = "a5" /></td>
         
       </tr>
       <tr>
         <td>2</td>
         <td>Other than Permanent (E)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a6" /></td>
+        <td><input type="text" placeholder="" name = "a7" /><input type="text" placeholder="" name = "a8" /></td>
+        <td><input type="text" placeholder="" name = "a9" /><input type="text" placeholder="" name = "a10" /></td>
       </tr>
 
       <tr>
         <td>3</td>
         <td>Total employees (D + E)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a11" /></td>
+        <td><input type="text" placeholder="" name = "a12" /><input type="text" placeholder="" name = "a13" /></td>
+        <td><input type="text" placeholder="" name = "a14" /><input type="text" placeholder="" name = "a15" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -164,25 +187,25 @@
       <tr>
         <td>1</td>
         <td>Permanent (F)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a16" /></td>
+        <td><input type="text" placeholder="" name = "a17" /><input type="text" placeholder="" name = "a18" /></td>
+        <td><input type="text" placeholder="" name = "a19" /><input type="text" placeholder="" name = "a20" /></td>
         
       </tr>
       <tr>
         <td>2</td>
         <td>Other than Permanent (G)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a21" /></td>
+        <td><input type="text" placeholder="" name = "a22" /><input type="text" placeholder="" name = "a23" /></td>
+        <td><input type="text" placeholder="" name = "a24" /><input type="text" placeholder="" name = "a25" /></td>
       </tr>
 
       <tr>
         <td>3</td>
         <td>Total workers (F + G)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a26" /></td>
+        <td><input type="text" placeholder="" name = "a27" /><input type="text" placeholder="" name = "a28" /></td>
+        <td><input type="text" placeholder="" name = "a29" /><input type="text" placeholder="" name = "a30" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -217,25 +240,25 @@
         
         <td>1</td>
         <td>Permanent (D)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a31" /></td>
+        <td><input type="text" placeholder="" name = "a32" /><input type="text" placeholder="" name = "a33" /></td>
+        <td><input type="text" placeholder="" name = "a34" /><input type="text" placeholder="" name = "a35" /></td>
         
       </tr>
       <tr>
         <td>2</td>
         <td>Other than Permanent (E)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a36" /></td>
+        <td><input type="text" placeholder="" name = "a37" /><input type="text" placeholder="" name = "a38" /></td>
+        <td><input type="text" placeholder="" name = "a39" /><input type="text" placeholder="" name = "a40" /></td>
       </tr>
 
       <tr>
         <td>3</td>
         <td>Total employees (D + E)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a41" /></td>
+        <td><input type="text" placeholder="" name = "a42" /><input type="text" placeholder="" name = "a43" /></td>
+        <td><input type="text" placeholder="" name = "a44" /><input type="text" placeholder="" name = "a45" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -265,25 +288,25 @@
       <tr>
         <td>1</td>
         <td>Permanent (F)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a46" /></td>
+        <td><input type="text" placeholder="" name = "a47" /><input type="text" placeholder="" name = "a48" /></td>
+        <td><input type="text" placeholder="" name = "a49" /><input type="text" placeholder="" name = "a50" /></td>
         
       </tr>
       <tr>
         <td>2</td>
         <td>Other than Permanent (G)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a51" /></td>
+        <td><input type="text" placeholder="" name = "a52" /><input type="text" placeholder="" name = "a53" /></td>
+        <td><input type="text" placeholder="" name = "a54" /><input type="text" placeholder="" name = "a55" /></td>
       </tr>
 
       <tr>
         <td>3</td>
         <td>Total workers (F + G)</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a56" /></td>
+        <td><input type="text" placeholder="" name = "a57" /><input type="text" placeholder="" name = "a58" /></td>
+        <td><input type="text" placeholder="" name = "a59" /><input type="text" placeholder="" name = "a60" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -309,14 +332,14 @@
       <br>
       <tr>
         <td>Board of Directors</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a61" /></td>
+        <td><input type="text" placeholder="" name = "a62" /><input type="text" placeholder="" name = "a63" /></td>
         
       </tr>
       <tr>
         <td>Key Management Personnel</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a64" /></td>
+        <td><input type="text" placeholder="" name = "a65" /><input type="text" placeholder="" name = "a66" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -350,15 +373,15 @@
       <br>
       <tr>
         <td>Permanent Employees</td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a67" /><input type="text" placeholder="" name = "a68" /><input type="text" placeholder="" name = "a69" /></td>
+        <td><input type="text" placeholder="" name = "a70" /><input type="text" placeholder="" name = "a71" /><input type="text" placeholder="" name = "a72" /></td>
+        <td><input type="text" placeholder="" name = "a73" /><input type="text" placeholder="" name = "a74" /><input type="text" placeholder="" name = "a75" /></td>
         </tr>
       <tr>
         <td>Permanent Workers</td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /><input type="text" placeholder="" required /><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" name = "a76" /><input type="text" placeholder="" name = "a77" /><input type="text" placeholder="" name = "a78" /></td>
+        <td><input type="text" placeholder="" name = "a79" /><input type="text" placeholder="" name = "a80" /><input type="text" placeholder="" name = "a81" /></td>
+        <td><input type="text" placeholder="" name = "a82" /><input type="text" placeholder="" name = "a83" /><input type="text" placeholder="" name = "a84" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->

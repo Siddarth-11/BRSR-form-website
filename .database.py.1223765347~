@@ -1,0 +1,76 @@
+from sqlalchemy import create_engine, text
+import os
+
+db_connection_string = os.environ['db_connection_string']
+
+engine = create_engine(db_connection_string,
+                       connect_args={"ssl": {
+                         "ssl_ca": "/etc/ssl/cert.pem",
+                       }})
+
+with engine.connect() as conn:
+  result = conn.execute(text("select * from brsr_form.listed_entity"))
+
+  result_dicts = []
+  for row in result.all():
+    result_dicts.append(list(row))
+
+  print(result_dicts)
+
+def listed_entity_data(info):
+  with engine.connect() as conn:
+    query = text("INSERT INTO listed_entity(cin, year_of_incorporation, corporate_address, email, telephone, website, financial_year, stock_exchange, paid_up_capital, contact_person_telephone, contact_person_email, reporting_boundary) VALUES(:cin, :year_of_incorporation, :corporate_address, :email, :telephone, :website, :financial_year, :stock_exchange, :paid_up_capital, :contact_person_telephone, :contact_person_email, :reporting_boundary)")
+
+    conn.execute(query,{
+                 "cin" : info['cin'],
+                 "year_of_incorporation" : info['year_of_incorporation'],
+                 "corporate_address" : info['corporate_address'],
+                 "email" : info['email'],
+                 "telephone" : info['telephone'],
+                 "website" : info['website'],
+                 "financial_year" : info['financial_year'],
+                 "stock_exchange" : info['stock_exchange'],
+                 "paid_up_capital" : info['paid_up_capital'],
+                 "contact_person_telephone" : info['contact_person_telephone'],
+                 "contact_person_email" : info['contact_person_email'],
+                 "reporting_boundary" : info['reporting_boundary']})
+
+
+def listed_entity_data(info):
+  with engine.connect() as conn:
+    query = text("INSERT INTO BusinessActivities (DescriptionOfMainActivity_1,DescriptionOfBusinessActivity_1,TurnoverPercentage_1,DescriptionOfMainActivity_2,DescriptionOfBusinessActivity_2,TurnoverPercentage_2) VALUES (:DescriptionOfMainActivity_1,:DescriptionOfBusinessActivity_1,:TurnoverPercentage_1,:DescriptionOfMainActivity_2,:DescriptionOfBusinessActivity_2,:TurnoverPercentage_2)")
+
+  
+
+
+
+
+
+
+                 
+def load_data_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(
+      text("select * from brsr_form.listed_entity where id = 1"))
+    rows = result.all()
+    if len(rows) == 0:
+      return None
+    else:
+      return list(rows[0])
+
+
+def store_trial_data(data):
+  with engine.connect() as conn:
+    query = text(
+      "INSERT INTO brsr_form.trial (Email_input, Tele_input, name_input) VALUES (:email, :tele, :name)"
+    )
+
+    conn.execute(
+      query, {
+        "email": data['Email_input'],
+        "tele": data['Tele_input'],
+        "name": data['name_input']
+      })
+
+
+    

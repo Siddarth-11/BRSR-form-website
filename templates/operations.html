@@ -3,86 +3,114 @@
 <head>
   <title>Operations</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
 
-    th, td {
-      text-align: left;
-      padding: 8px;
-      border-bottom: 1px solid #ddd;
-    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
-  body {
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  color:black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: darkgray;
-  }
+    background-image: url('/templates/bgi.jpg');
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+label {
+    font-size: 20px;
     text-decoration: underline;
-  }
+    text-decoration-color: black;
+    color:black;
+    font-style: italic;
+}
 
-  input[type="text"] {
+input[type="text"] {
     width: 100%;
     padding: 6px 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
-  }
-
-  button {
-    font-size: 24px;
-    font-weight: bold;  
-  }
-
-  a {
-    margin-top: -1600px;
-    margin-right: 69px;
-    color: blue; 
-    text-decoration:none;
-    font-size: 17px;
-  }
-
-  a:hover {
-    text-decoration:underline; 
-  }
-
-  label {
-    font-size: 18px;
-    text-decoration: underline;
-  }
-
+}    
+    
 </style>
 </head>
 <body>
-    <a href="PS.html">Product/Services</a>
-    <a href="Employees.html">Employees</a><br>
-    <br>
+
+  <ul>
+    <li><a href="DOE.html">Details of Entity</a></li>
+    <li><a href="PS.html">Products/Services</a></li>
+    <li><a class="active" href="Operations.html">Operations</a></li>
+    <li><a href="Employees.html">Employees</a></li>
+    <li><a href="HSA.html">Joint Ventures</a></li>
+    <li><a href="TDC.html">Transparency and Disclosures</a></li>
+    <li style="float:right"><a href="Section_B.html">SECTION-B</a></li>
+  </ul><br>
+  <br>
         <header>Operations</header><br>
         <br>
+  <form action = "/operationsdb" method = "post" >
   <table>
     <thead>
       <tr>
@@ -98,15 +126,15 @@
       <tr>
         
         <td>National</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "national_1" /></td>
+        <td><input type="text" placeholder="" required name = "national_2" /></td>
+        <td><input type="text" placeholder="" required name = "national_3" /></td>
       </tr>
       <tr>
         <td>International</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "international_1" /></td>
+        <td><input type="text" placeholder="" required name = "international_2" /></td>
+        <td><input type="text" placeholder="" required name = "international_3" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -128,11 +156,11 @@
         <br>
       <tr>
         <td>National (No. of States)</td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "national_locations" /></td>
       </tr>
       <tr>
         <td>International (No. of Countries)</td>
-        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required name = "international_locations" /></td>
       </tr>
       </tr>
       <!-- Add more rows as needed -->
@@ -141,11 +169,11 @@
   <br>
   <label>b. What is the contribution of exports as a percentage of the total turnover of the entity?</label><br>
         <br>
-        <input type="text" placeholder="" required /><br>
+        <input type="text" placeholder="" required name = "exports_contribution" /><br>
         <br> 
   <label>c. A brief on types of customers</label><br>
         <br>   
-        <input type="text" placeholder="" required /><br>
+        <input type="text" placeholder="" required name = "customer_types" /><br>
         <br>
         <br>
         

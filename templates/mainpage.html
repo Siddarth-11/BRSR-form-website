@@ -2,82 +2,129 @@
 <html>
   <head>
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color:darkgray;
-      }
       
-      form {
-        width: 800px;
-        margin: 0 auto;
-      }
-      
-      label {
-        display: block;
-        margin-top: 10px;
-        font-size: 18px;
-        text-decoration: underline;
-      }
-      
-      input[type="text"],
-      input[type="number"],
-      input[type="date"] {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      
-      button {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 15px;
-      }
-      
-      button:hover {
-        background-color: blue;
-      }
-      
-      header {
-        text-align: center;
-        font-size: 26px;
-        margin-bottom: 20px;
-        text-decoration: underline;
-      }
-      
-      input[type="text"]:focus,
-      input[type="number"]:focus,
-      input[type="date"]:focus {
-        outline: none;
-        border-color: #007bff;
-      }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
-      a {
-    margin-top: -1600px;
-    margin-right: 69px;
-    color: blue; 
-    text-decoration:none; 
-    font-size: 17px;
-  }
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
 
-  a:hover {
-    text-decoration:underline; 
-  }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  color:black;
+}
+
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color:#ccc;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: black;
+  color:black;
+  font-style: italic;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  border-color: #333;
+}
+
+
+input[type="text"][placeholder="Enter street address"],
+input[type="text"][placeholder="Enter street address line 2"],
+input[type="text"][placeholder="Enter your country"],
+input[type="text"][placeholder="Enter your city"],
+input[type="text"][placeholder="Enter your region"],
+input[type="number"][placeholder="Enter postal code"] {
+  width: 49%;
+  margin-right: 2%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color:black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/templates/bgi.jpg');
+}
   
     </style>
     <title>Details of listed Entity</title>
   </head>
   <body>
-    <a href="PS.html">Products/Services</a>
-    <a href="trial.html">Login</a>
+    <ul>
+      <li><a class="active" href="DOE.html">Details of Entity</a></li>
+      <li><a href="PS.html">Products/Services</a></li>
+      <li><a href="Operations.html">Operations</a></li>
+      <li><a href="Employees.html">Employees</a></li>
+      <li><a href="HSA.html">Joint Ventures</a></li>
+      <li><a href="TDC.html">Transparency and Disclosures</a></li>
+      <li style="float:right"><a href="Section_B.html">SECTION-B</a></li>
+    </ul><br>
+    <br>
       <header>Details of Listed Entity</header><br>
       <br>
       <form action = "/inputdb" method = "post" >

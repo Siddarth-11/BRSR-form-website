@@ -3,86 +3,115 @@
 <head>
   <title>Joint ventures</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+    
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
-    th, td {
-      text-align: left;
-      padding: 8px;
-      border-bottom: 1px solid #ddd;
-    }
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
-  body {
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  color:black;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: darkgray;
-  }
+    background-image: url('/templates/bgi.jpg');
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+label {
+    font-size: 20px;
     text-decoration: underline;
-  }
+    text-decoration-color: black;
+    color:black;
+    font-style: italic;
+}
 
-  input[type="text"] {
+input[type="text"] {
     width: 100%;
     padding: 6px 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
-  }
-
-  button {
-    font-size: 24px;
-    font-weight: bold;  
-  }
-
-  a {
-    margin-top: -1600px;
-    margin-right: 69px;
-    color: blue; 
-    text-decoration:none; 
-    font-size: 17px;
-  }
-
-  a:hover {
-    text-decoration:underline; 
-  }
-
-  label {
-    font-size: 18px;
-    text-decoration: underline;
-  }
+}
 
 </style>
 </head>
 <body>
-    <a href="Employees.html">Employees</a>
-    <a href="TDC.html">Transparency and Disclosures</a><br>
-    <br>
+    
+  <ul>
+    <li><a href="DOE.html">Details of Entity</a></li>
+    <li><a href="PS.html">Products/Services</a></li>
+    <li><a href="Operations.html">Operations</a></li>
+    <li><a href="Employees.html">Employees</a></li>
+    <li><a class="active" href="HSA.html">Joint Ventures</a></li>
+    <li><a href="TDC.html">Transparency and Disclosures</a></li>
+    <li style="float:right"><a href="Section_B.html">SECTION-B</a></li>
+  </ul><br>
+  <br>
         <header>Holding, Subsidiary and Associate Companies (including joint ventures)</header><br>
         <br>
+  <form action = "/HSAdb" method = "post" >
   <table>
     <thead>
       <tr>
@@ -99,10 +128,10 @@
       <tr>
         
         <td>1</td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><input type="text" placeholder="" required /></td>
-        <td><select>
+        <td><input type="text" placeholder="" required name = "Name" /></td>
+        <td><input type="text" placeholder="" required name = "Relationship" /></td>
+        <td><input type="text" placeholder="" required name = "SharePercentage" /></td>
+        <td><select name="ParticipatesInBusinessResponsibility" required>
                 <option hidden></option>
                 <option>Yes</option>
                 <option>No</option>
@@ -117,18 +146,18 @@
   <header>CSR Details</header>
 
   <label>(i) Whether CSR is applicable as per section 135 of Companies Act, 2013: (Yes/No)</label>
-    <select>
+    <select name="CSRApplicable" required>
     <option hidden></option>
     <option>Yes</option>
     <option>No</option>
 </select><br>
 <br>
    <label>(ii) Turnover (in Rs.)</label>
-    <input type="Text" placeholder="" required /><br>
+    <input type="Text" placeholder="" required name = "TurnoverInRs" /><br>
     <br>
 
    <label>(iii) Net worth (in Rs.)</label> 
-    <input type="Text" placeholder="" required /><br>
+    <input type="Text" placeholder="" required name = "NetWorthInRs" /><br>
     <br>
     <br>
 

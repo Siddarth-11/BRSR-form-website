@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .background {
+    background-image: url('landing.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    background-color:slategray;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-style: italic;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 25px;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color:blue;
+  }
+  
+  </style>
+  <title>Business Responsibility and Sustainability Reporting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background">
+    <div class="container">
+      <form action = "/db" method = "post" >
+      <h1>Business Responsibility and Sustainability Reporting</h1><br>
+      <br>
+      <label for="report-id">Report ID:</label>
+      <input type="text" id="report-id" placeholder="Enter Report ID" name = "report_id"><br>
+      <br>
+      <br>
+      <label for="period">Period (Begin to End):</label>
+      <input type="date" id="period" placeholder="Enter Period" name = "begin_period">
+      <input type="date" id="period" placeholder="Enter Period" name = "end_period"><br>
+      <br>
+      <br>
+      <form action="DOE.html">
+        <button id="create-button">Create</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

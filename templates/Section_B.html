@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MPD</title>
+  <style>
+    
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  color:black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/templates/bgi.jpg');
+}
+
+label {
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    color:black;
+    font-style: italic;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}  
+
+</style>
+</head>
+<body>
+    
+  <ul>
+    <li><a href="DOE.html">SECTION-A</a></li>
+    <li><a class="active" href="Section_B.html">SECTION-B</a></li>
+  </ul><br>
+  <br>
+  
+        <header>MANAGEMENT AND PROCESS DISCLOSURES</header><br>
+        <br>
+  <table>
+    <thead>
+      <tr>
+        <th>Disclosure Questions</th>
+        <th>P<br>1</th>
+        <th>P<br>2</th>
+        <th>P<br>3</th>
+        <th>P<br>4</th>
+        <th>P<br>5</th>
+        <th>P<br>6</th>
+        <th>P<br>7</th>
+        <th>P<br>8</th>
+        <th>P<br>9</th>
+      </tr>
+      <tr>
+        <th>Policy and management processes</th>
+      </tr>
+    </thead>
+    <tbody>
+        <label>This section is aimed at helping businesses demonstrate the structures, policies and processes put in place towards adopting the NGRBC Principles and Core Elements.</label><br>
+        <br>
+
+        <tr>
+        
+        <td>1. a. Whether your entity's policy/policies cover each principle and its core elements of the NGRBCs.(Yes/No)</td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        
+      </tr>
+
+      <tr>
+
+      <td>b.Has the policy been approved by the Board?(Yes/No)</td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select></td>
+        
+      </tr>
+
+      <tr>
+
+        <td>2. Whether the entity has translated the policy into procedures.(Yes / No)</td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+      
+    </tr>
+
+      <tr>
+
+        <td>b.Has the policy been approved by the Board?(Yes/No)</td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          <td><select>
+              <option hidden></option>
+              <option>Yes</option>
+              <option>No</option>
+          </select></td>
+          
+        </tr>
+
+        <tr>
+
+            <td>3. Do the enlisted policies extend to your value chain partners?(Yes/No</td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              <td><select>
+                  <option hidden></option>
+                  <option>Yes</option>
+                  <option>No</option>
+              </select></td>
+              
+            </tr>
+
+         <tr>
+
+                <td>4. Name of the national and international codes/certifications/labels/ standards (e.g. Forest Stewardship Council, Fairtrade, Rainforest Alliance, Trustea) standards (e.g. SA 8000, OHSAS, ISO, BIS) adopted by your entity and mapped to each principle.</td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+                <td><input type="text" placeholder="" required /></td>
+              
+        </tr>
+
+        <tr>
+
+            <td>5. Specific commitments, goals and targets set by the entity with defined timelines, if any.</td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+          
+         </tr>
+
+         <tr>
+
+            <td>6. Performance of the entity against the specific commitments, goals and targets along-with reasons in case the same are not met.</td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+          
+         </tr>
+
+      
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Governance, leadership and oversight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>7. Statement by director responsible for the business responsibility report, highlighting ESG related challenges, targets and achievements (listed entity has flexibility regarding the placement of this disclosure)</td>
+        
+      </tr>
+
+      <tr>
+
+        <td>8. Details of the highest authority responsible for implementation and oversight of the Business Responsibility policy (ies).</td>
+        <td><input type="text" placeholder="" required /></td>
+
+      </tr>
+
+      <tr>
+
+        <td>9. Does the entity have a specified Committee of the Board/ Director responsible for decision making on sustainability related issues? (Yes / No). If yes, provide details.</td>
+        <td><select>
+            <option hidden></option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <input type="text" placeholder="If yes, provide details" required /></td>
+    
+        </tr>
+      
+    </tbody>
+  </table><br>
+  <br>
+
+  <label>10. Details of Review of NGRBCs by the Company:</label><br>
+  <br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Subject for Review</th>
+        <th>Indicate whether review was undertaken by Director / Committee <br> of the Board / Any other Committee</th>
+        <th>Frequency (Annually/ Half yearly / Quarterly/ Any other - please specify)</th>
+      </tr>
+      
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+            <th></th>
+            <th>P<br>1</th>
+            <th>P<br>2</th>
+            <th>P<br>3</th>
+            <th>P<br>4</th>
+            <th>P<br>5</th>
+            <th>P<br>6</th>
+            <th>P<br>7</th>
+            <th>P<br>8</th>
+            <th>P<br>9</th>
+            <th>P<br>1</th>
+            <th>P<br>2</th>
+            <th>P<br>3</th>
+            <th>P<br>4</th>
+            <th>P<br>5</th>
+            <th>P<br>6</th>
+            <th>P<br>7</th>
+            <th>P<br>8</th>
+            <th>P<br>9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Performance against above <br> policies and follow up action</td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td> 
+      </tr>
+
+      <tr>
+        <td>Compliance with statutory requirements of relevance to <br> the principles, and, rectification of any non-compliances</td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td>
+        <td><input type="text" placeholder="" required /></td> 
+      </tr>
+
+    </tbody>
+</table><br>
+
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>P<br>1</th>
+            <th>P<br>2</th>
+            <th>P<br>3</th>
+            <th>P<br>4</th>
+            <th>P<br>5</th>
+            <th>P<br>6</th>
+            <th>P<br>7</th>
+            <th>P<br>8</th>
+            <th>P<br>9</th>
+          </tr>
+          
+        </thead>
+        <tbody>
+            
+            <tr>
+            <td>11. Has the entity carried out independent P P P P P P P P P assessment/ evaluation of the working of 123456789 its policies by an external agency?(Yes/No). If yes, provide name of the agency.</td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            </tr> 
+
+        </tbody>
+      </table><br>
+      <br>
+      
+
+<label>12. If answer to question (1) above is "No" i.e. not all Principles are covered by a policy, reasons to be stated:</label><br>
+<br>
+  <table>
+    <thead>
+      <tr>
+        <th>Questions</th>
+        <th>P<br>1</th>
+        <th>P<br>2</th>
+        <th>P<br>3</th>
+        <th>P<br>4</th>
+        <th>P<br>5</th>
+        <th>P<br>6</th>
+        <th>P<br>7</th>
+        <th>P<br>8</th>
+        <th>P<br>9</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+            <td>The entity does not consider the Principles material to its business (Yes/No)</td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><input type="text" placeholder="If No, Reason" required /></td>
+        </tr>
+
+        <tr>
+            <td>The entity is not at a stage where it is in a position to formulate and implement the policies on specified principles (Yes/No)</td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+        </tr>
+
+        <tr>
+            <td>The entity does not have the financial or/human and technical resources available for the task (Yes/No)</td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+        </tr>
+
+        <tr>
+            <td>It is planned to be done in the next financial year (Yes/No)</td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+            <td><select>
+                <option hidden></option>
+                <option>Yes</option>
+                <option>No</option>
+            </select></td>
+        </tr>
+
+        <tr>
+            <td>Any other reason (please specify)</td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+            <td><input type="text" placeholder="" required /></td>
+        </tr>
+
+    </tbody>
+  </table><br>
+  <br>
+
+
+  <form>
+    <button>Submit</button>
+  </form>
+
+</body>
+</html>
