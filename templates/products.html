@@ -1,86 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Products/Services</title>`
+  <title>Products/Services</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
 
-    th, td {
-      text-align: left;
-      padding: 8px;
-      border-bottom: 1px solid #ddd;
-    }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
-  body {
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  color:black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: darkgray;
-  }
+    background-image: url('/templates/bgi.jpg');
+}
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+label {
+    font-size: 20px;
     text-decoration: underline;
-  }
+    text-decoration-color: black;
+    color:black;
+    font-style: italic;
+}
 
-  input[type="text"] {
+input[type="text"] {
     width: 100%;
     padding: 6px 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
-  }
+}
 
-  a {
-    margin-top: -1600px;
-    margin-right: 69px;
-    color: blue; 
-    text-decoration:none; 
-    font-size: 17px;
-  }
-
-  a:hover {
-    text-decoration:underline; 
-  }
-
-  label {
-    font-size: 18px;
-    text-decoration: underline;
-  }
-
-  button {
-    font-size: 24px;
-    font-weight: bold;  
-  }
-
-</style>
+  </style>
 </head>
 <body>
-  <a href="DOE.html">Details of Entity</a>
-  <a href="Operations.html">Operations</a><br>
-  <br>
+
+    <ul>
+        <li><a href="DOE.html">Details of Entity</a></li>
+        <li><a class="active" href="PS.html">Products/Services</a></li>
+        <li><a href="Operations.html">Operations</a></li>
+        <li><a href="Employees.html">Employees</a></li>
+        <li><a href="HSA.html">Joint Ventures</a></li>
+        <li><a href="TDC.html">Transparency and Disclosures</a></li>
+        <li style="float:right"><a href="Section_B.html">SECTION-B</a></li>
+      </ul><br>
+      <br>
         <header>Products/Services</header><br>
         <br>
   <form action = "/productdb" method = "post" >
@@ -151,13 +178,6 @@
   </table><br>
   <br>
   <br>
-
-  <form>
-    <button>Submit</button>
-  </form>   
-
-</body>
-</html>
 
   <form>
     <button>Submit</button>
