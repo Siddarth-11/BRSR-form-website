@@ -3,74 +3,112 @@
 <head>
   <title>Joint ventures</title>
   <style>
+    
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
 
-    th, td {
-      text-align: left;
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
-    }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
-  body {
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  color:black;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background-color: cadetblue;
-  }
+    background-image: url('/templates/bgi.jpg');
+}
 
-  header {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
+label {
+    font-size: 20px;
     text-decoration: underline;
-    color: whitesmoke;
-  }
+    text-decoration-color: black;
+    color:black;
+    font-style: italic;
+}
 
-  input[type="text"] {
+input[type="text"] {
     width: 100%;
     padding: 6px 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
-  }
+}
 
-  button {
-    font-size: 24px;
-    font-weight: bold;  
-  }
-
-  a {
-    margin-top: -1600px;
-    margin-right: 69px;
-    color: blue; 
-    text-decoration:none; 
-    font-size: 17px;
-  }
-
-  a:hover {
-    text-decoration:underline; 
-  }
-
-  label {
-    font-size: 18px;
-    text-decoration: underline;
-    text-decoration-color: black;
-    color: whitesmoke;
-    font-style: italic;;
-  }
-    
 </style>
 </head>
 <body>
-    <a href="Employees.html">Employees</a>
-    <a href="TDC.html">Transparency and Disclosures</a><br>
-    <br>
+    
+  <ul>
+    <li><a href="DOE.html">Details of Entity</a></li>
+    <li><a href="PS.html">Products/Services</a></li>
+    <li><a href="Operations.html">Operations</a></li>
+    <li><a href="Employees.html">Employees</a></li>
+    <li><a class="active" href="HSA.html">Joint Ventures</a></li>
+    <li><a href="TDC.html">Transparency and Disclosures</a></li>
+    <li style="float:right"><a href="Section_B.html">SECTION-B</a></li>
+  </ul><br>
+  <br>
         <header>Holding, Subsidiary and Associate Companies (including joint ventures)</header><br>
         <br>
   <form action = "/HSAdb" method = "post" >
