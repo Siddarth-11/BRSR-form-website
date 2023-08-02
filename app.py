@@ -2,13 +2,13 @@ from flask import Flask, render_template, request, redirect, url_for, flash, ses
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import mysql.connector
-from database import listed_entity_data, bussiness_activites, products_services, plants_located_data, market_served_data, company_details_data, Comm_ComplaintsGrievances, Investers_ComplaintsGrievances, Shareholders_ComplaintsGrievances, Emp_ComplaintsGrievances, Customer_ComplaintsGrievances, partners_ComplaintsGrievances, others_ComplaintsGrievances, entity_overview_data, landing_page_data, insert_employee_data
+from database import listed_entity_data, bussiness_activites, products_services, plants_located_data, market_served_data, company_details_data, Comm_ComplaintsGrievances, Investers_ComplaintsGrievances, Shareholders_ComplaintsGrievances, Emp_ComplaintsGrievances, Customer_ComplaintsGrievances, partners_ComplaintsGrievances, others_ComplaintsGrievances, entity_overview_data, landing_page_data, insert_employee_data, management_process_disclosure_data
 
 app = Flask(__name__, static_folder='templates')
 
 app.config['SECRET_KEY'] = 'db_connection_string'
 app.config[
-  'SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://0m9ayircm4hr3v9iud9p:pscale_pw_kQs5hYfTVytgKSLgAgz9bS4XHTUohjGKzcpW4j0bQtF@aws.connect.psdb.cloud/brsr_form?charset=utf8mb4&ssl_ca=/etc/ssl/cert.pem'
+  'SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://hw6o2s2nl54tzv0q18gv:pscale_pw_DviKRaHOfLWrqzmobgg23XK372GPwDv7XF3wsAxRAW2@aws.connect.psdb.cloud/brsr_form?charset=utf8mb4&ssl_ca=/etc/ssl/cert.pem'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -127,18 +127,23 @@ def SecB():
   return render_template('Section_B.html')
 
 
+@app.route("/Section_C.html")
+def SecC():
+  return render_template('Section_C.html')
+
+
 @app.route("/db", methods=['post'])
 def input0():
   name = request.form.to_dict()
   landing_page_data(name)
-  return render_template('landing_page.html', application=name)
+  return render_template('mainpage.html', application=name)
 
 
 @app.route("/inputdb", methods=['post'])
 def input1():
   name = request.form.to_dict()
   listed_entity_data(name)
-  return render_template('mainpage.html', application=name)
+  return render_template('products.html', application=name)
 
 
 @app.route("/productdb", methods=['POST'])
@@ -146,7 +151,7 @@ def input2():
   name = request.form.to_dict()
   bussiness_activites(name)
   products_services(name)
-  return render_template('products.html', application=name)
+  return render_template('operations.html', application=name)
 
 
 @app.route("/operationsdb", methods=['POST'])
@@ -154,14 +159,14 @@ def input3():
   name = request.form.to_dict()
   plants_located_data(name)
   market_served_data(name)
-  return render_template('operations.html', application=name)
+  return render_template('employees.html', application=name)
 
 
 @app.route("/HSAdb", methods=['POST'])
 def input4():
   name = request.form.to_dict()
   company_details_data(name)
-  return render_template('HSA.html', application=name)
+  return render_template('TAD.html', application=name)
 
 
 @app.route("/TADdb", methods=['POST'])
@@ -175,14 +180,22 @@ def input5():
   partners_ComplaintsGrievances(name)
   others_ComplaintsGrievances(name)
   entity_overview_data(name)
-  return render_template('TAD.html', application=name)
+  return render_template('Section_B.html', application=name)
 
 
 @app.route("/Employeesdb", methods=['POST'])
 def input6():
   name = request.form.to_dict()
   insert_employee_data(name)
-  return render_template('employees.html', application=name)
+  return render_template('HSA.html', application=name)
+
+
+@app.route("/Section_Bdb", methods=['POST'])
+def input7():
+  name = request.form.to_dict()
+  print()
+  management_process_disclosure_data(name)
+  return render_template('Section_C.html', application=name)
 
 
 if __name__ == "__main__":
